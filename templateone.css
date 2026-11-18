@@ -1,0 +1,512 @@
+/* start varible  */
+:root {
+    --main-color: #10cab7;
+    --second-color: #2c4755;
+    --paading: 60px;
+    --three--color: #f6f6f6f6;
+}
+
+/* End varible  */
+
+
+
+/* start global rules  */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "work sans", sans-serif;
+}
+
+.contaienr {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* small  */
+@media (min-width:767px) {
+    .contaienr {
+        width: 750px;
+    }
+}
+
+/* mediuem */
+@media (min-width : 992px) {
+    .contaienr {
+        width: 970px;
+    }
+}
+
+/* large  */
+@media (min-width:1200px) {
+    .contaienr {
+        width: 1170px;
+    }
+}
+
+/* End Global Rules  */
+
+/* start header */
+.header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo {
+    width: 60px;
+}
+
+.header .links {
+    position: relative;
+}
+
+.header .links:hover .icon span:nth-child(2) {
+    width: 100%;
+}
+
+.header .links .icon {
+    width: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.header .links .icon span {
+    background-color: #333;
+    margin-bottom: 3px;
+    height: 1.5px;
+}
+
+.header .links .icon span:first-child {
+    width: 100%;
+}
+
+.header .links .icon span:nth-child(2) {
+    width: 50%;
+    transition: 0.7s;
+}
+
+.header .links .icon span:last-child {
+    width: 100%;
+}
+
+.header .links ul {
+    position: absolute;
+    list-style: none;
+    margin: 0;
+    right: 0;
+    background-color: #f6f6f6f6;
+    padding: 0;
+    min-width: 200px;
+    top: calc(100% + 15px);
+    display: none;
+    z-index: 1;
+}
+
+.header .links ul::before {
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f6f6f6f6 transparent;
+    position: absolute;
+    right: 2.5px;
+    top: -18px;
+}
+
+.header .links:hover ul {
+    display: block;
+}
+
+.header .links ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    transition: 0.5s;
+}
+
+.header .links ul li a:hover {
+    padding-left: 20px;
+}
+
+.header .links ul li:not(:last-child) a {
+    border: 1px solid #eee
+}
+
+/* End header  */
+
+
+/* Start Landing  */
+.landing {
+    background-image: url(c:/Users/DELL/Downloads/white.jpeg);
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+.landing .intro-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    max-width: 100%;
+}
+
+.landing .intro-text h1 {
+    margin: 0;
+    font-weight: bold;
+    color: var(--main-color);
+    font-size: 50px;
+    text-align: center;
+}
+
+.landing .intro-text p {
+    font-size: 19px;
+    color: white;
+}
+
+@media (max-width:676px) {
+    .landing {
+        width: calc(100% + 41px);
+    }
+
+    .features {
+        width: 410px;
+    }
+
+    .contact {
+        width: 415px;
+    }
+
+}
+
+/*  End Landing  */
+
+/* Start featureas */
+.features {
+    padding-top: var(--paading);
+    padding-bottom: var(--paading);
+    background-color: var(--three--color);
+}
+
+.features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.features .feat {
+    padding: 20px;
+    text-align: center;
+}
+
+.features .feat i {
+    color: var(--main-color);
+}
+
+.features .feat h3 {
+    font-weight: 800;
+    margin: 30px 0;
+}
+
+.features .feat p {
+    line-height: 1.8;
+    color: #777;
+    font-size: 17px;
+}
+
+
+
+
+/* End featureas */
+
+
+/* Start Global  heading services */
+.special-heading {
+    color: #ebeced;
+    font-size: 100px;
+    text-align: center;
+    margin: 0;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+.special-heading+p {
+    color: #756e6e;
+    text-align: center;
+    margin: -30px 0 0;
+    font-size: 18px;
+}
+
+/* End  Global heading Services */
+
+
+/* Start Services */
+.services {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.services-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    margin-top: 100px;
+}
+
+.services-content .srv {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+@media (max-width:767px) {
+
+    .services-content .srv {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.services-content .srv i {
+    color: var(--main-color);
+    flex-basis: 60px;
+}
+
+.services-content .srv .text {
+    flex: 1;
+}
+
+.services-content .srv .text h3 {
+    margin: 0 0 20px;
+}
+
+.services-content .srv .text p {
+    color: #444;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+.services-content .image {
+    text-align: center;
+    position: relative;
+}
+
+.services-content .image img {
+    width: 200px;
+}
+
+.services-content .image::before {
+    content: "";
+    position: absolute;
+    background-color: var(--second-color);
+    width: 80px;
+    height: calc(100% + 100px);
+    top: -50px;
+    right: 50px;
+    z-index: -1;
+}
+
+@media (max-width:1199px) {
+    .services-content .image-cloum {
+        display: none;
+    }
+}
+
+/* End Services */
+
+/* Start portfloio  */
+.portfolio {
+    padding-bottom: var(--paading);
+    padding-top: var(--paading);
+    background-color: var(--three--color);
+}
+
+@media (max-width:767px) {
+    .portfolio {
+        width: 420px;
+    }
+}
+
+.portfolio .portfolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    margin-top: 100px;
+}
+
+.portfolio .card {
+    background-color: white;
+}
+
+.portfolio .card img {
+    width: 100%;
+}
+
+.portfolio .card .info {
+    padding: 20px;
+}
+
+.portfolio .card .info h3 {
+    margin: 0;
+}
+
+.portfolio .card .info p {
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+@media (max-width:767px) {
+    .portfolio .card .info {
+        text-align: center;
+    }
+}
+
+/* End portfloio  */
+
+/* Start About */
+.about {
+    padding-top: var(--paading);
+    padding-bottom: calc(var(--paading) + 60px);
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.about-content .image {
+    position: relative;
+    width: 250px;
+    height: 300px;
+}
+
+.about-content .image::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 60%;
+    border-left: 66px solid var(--main-color);
+    border-bottom: 60px solid var(--main-color);
+    right: -77px;
+    z-index: -1;
+    top: -19px;
+}
+
+@media (max-width:767px) {
+    .about-content {
+        padding-bottom: 40px;
+        margin-top: 40px;
+    }
+}
+
+.about-content .image img {
+    max-width: 100%;
+}
+
+.about-content .text {
+    flex: 1;
+    padding-left: 117px;
+    padding-top: 10px;
+}
+
+.about-content .text p:first-of-type {
+    font-weight: bold;
+    line-height: 2;
+    margin-bottom: 40px;
+    width: 700px;
+}
+
+.about-content .text hr {
+    width: 50%;
+    display: inline-block;
+    border-color: var(--main-color);
+}
+
+.about-content .text p:last-of-type {
+    line-height: 2;
+    margin-top: 40px;
+    font-weight: bold;
+}
+
+@media (min-width:677px) and (max-width:1098px) {
+    .about-content .image img {
+        margin-left: 130%;
+        margin-top: 13px;
+    }
+
+    .about-content .image::after {
+        position: absolute;
+        left: 532px;
+    }
+}
+
+@media (max-width:676px) {
+    .about-content .image {
+        left: 18%;
+    }
+
+    .about-content .image::after {
+        display: none;
+    }
+
+    .about-content .text {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .about-content .text p:first-of-type,
+    .about-content .text p:last-of-type {
+        width: 400px;
+    }
+}
+
+/* End About */
+
+
+/* Start Contact  */
+.contact {
+    padding-bottom: var(--paading);
+    padding-top: var(--paading);
+    background-color: var(--three--color);
+}
+
+.Contact-content p {
+    font-weight: bold;
+    font-size: 40px;
+    color: var(--second-color);
+    padding-top: 45px;
+    padding-left: 90px;
+}
+
+.Contact-content a {
+    text-decoration: none;
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 21px;
+    padding-left: 91px;
+}
+
+.copy {
+    padding-left: 48%;
+    padding-top: 2%;
+    position: absolute;
+}
+
+@media (max-width:676px) {
+    .copy {
+        padding-left: 33%;
+    }
+}
+
+/* End Contact  */
