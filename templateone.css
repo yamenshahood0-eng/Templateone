@@ -145,7 +145,7 @@ body {
 
 /* Start Landing  */
 .landing {
-    background-image: url(c:/Users/DELL/Downloads/white.jpeg);
+    background-image: url(white.jpeg);
     background-size: cover;
     height: 100vh;
     position: relative;
